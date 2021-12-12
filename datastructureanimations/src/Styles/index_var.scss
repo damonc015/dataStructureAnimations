@@ -1,0 +1,11 @@
+$primaryColor: white;
+$bodyTextColor: black;
+$navFontColor: white;
+$navBgColor: black;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

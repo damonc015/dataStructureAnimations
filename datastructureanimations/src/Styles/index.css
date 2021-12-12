@@ -1,0 +1,151 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Fredericka the Great", cursive;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: black;
+  width: 100vw;
+  height: auto;
+  color: white;
+}
+
+.homeContainer {
+  width: auto;
+}
+
+.homeItem {
+  margin-left: 4vw;
+}
+
+.listContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: auto;
+  padding: 1vh;
+}
+
+.listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  min-width: 15vw;
+  height: 8vh;
+  overflow: visible;
+  z-index: 100;
+}
+
+.listItem:hover .listItemContent {
+  display: block;
+}
+
+.listItemTitle:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.listItemContent {
+  background-color: black;
+  position: absolute;
+  overflow: visible;
+  display: none;
+  min-width: 15vw;
+  height: auto;
+  top: 8vh;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding-bottom: 1vh;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: yellow;
+}
+
+.bodylink {
+  color: black;
+  text-decoration: none;
+}
+
+.bodylink:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .listContainer {
+    width: 10vw;
+  }
+  .listItem {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+/*# sourceMappingURL=index.css.map */

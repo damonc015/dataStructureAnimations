@@ -1,0 +1,116 @@
+@import "./index_var.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Fredericka the Great", cursive;
+  color: $bodyTextColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  background-color: $primaryColor;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  @include flex(space-between, center,row);
+  background-color: $navBgColor;
+  width: 100vw;
+  height: auto;
+  color:$navFontColor;
+}
+
+.homeContainer{
+  width: auto;
+}
+
+.homeItem{
+  margin-left:4vw;
+}
+
+.listContainer{
+  @include flex(space-evenly,center,row);
+  width: auto;
+  padding: 1vh;
+}
+
+.listItem{
+  @include flex(space-evenly,center,column);
+  position: relative;
+  min-width: 15vw;
+  height:8vh;
+
+  overflow:visible;
+  z-index: 100;
+  &:hover{
+    .listItemContent{display: block;}
+  }
+}
+
+.listItemTitle{
+  &:hover{
+    color:yellow;
+    cursor: pointer;
+  }
+}
+
+.listItemContent{
+  background-color: black;
+  position: absolute;
+  overflow: visible;
+  display: none;
+  min-width: 15vw;
+  height: auto;
+  top:8vh;
+  text-align: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  padding-bottom: 1vh;
+}
+
+.navlink{
+    color:$navFontColor;
+    text-decoration: none;
+  
+   &:hover{
+      color: yellow;
+   }
+}
+
+.bodylink{
+    color:$bodyTextColor;
+    text-decoration: none;
+  
+   &:hover{
+      filter:invert(100%);
+   }
+}
+
+.menu{
+  display: none;
+}
+
+@media (max-width:768px){
+.listContainer{
+  width: 10vw;
+}
+.listItem{
+  display:none;
+}
+.menu{
+  display: block;
+}
+}
